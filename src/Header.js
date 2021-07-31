@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function Header() {
     return(
-        <h1 class="navbar">Home</h1>
+        <div className="navContainer">
+            <h1 className="navbar">Home</h1>
+        </div>
     )
 }

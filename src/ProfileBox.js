@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import data from "./data";
 
 function ProfileBox() {
-    // const [count, setCount] = useState(data);
+    const [count, setCount] = useState(data);
     const [number, setNumber] = useState(0);
  
     function decrementCount() {
@@ -23,10 +23,38 @@ function ProfileBox() {
     // }
 
     return (
-        <div>
-            <h1 class="data">{JSON.stringify(data[number])}</h1>
-            <button id="prevBtn" onClick={() => decrementCount()}>- Previous</button>
-            <button id="nextBtn" onClick={() => incrementCount()}>Next -</button>
+        <div className="container">
+            <div className="data">
+                <div className="id">
+                <h2>{count[number].id}/{count.length}</h2>
+                </div>
+                <div className="name">
+                <h1>{count[number].name.first} {count[number].name.last}</h1>
+                </div>
+                <div className="location">
+                <h3>From: &nbsp;</h3> {count[number].city}, {count[number].country}
+                </div>
+                <div className="title">
+                <h3>Job Title: &nbsp;</h3> {count[number].title}
+                </div>
+                <div className="employer">
+                <h3>Employer: &nbsp;</h3> {count[number].employer}
+                </div>
+                <div className="favoriteMovies">
+                <h3>Favorite Movies:</h3> 
+                    <ol id="movieList">
+                        {count[number].favoriteMovies.map((item, index) => (
+                            <li key={index}>
+                                {item}
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </div>
+            <div className="btns">
+            <button id="prevBtn" onClick={() => decrementCount()}>&lt; Previous</button>
+            <button id="nextBtn" onClick={() => incrementCount()}>Next &gt;</button>
+            </div>
         </div>
     );
 }

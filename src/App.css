@@ -1,23 +1,18 @@
-body {
+.App {
 	background-color: #222223;
-	border: 1px solid black;
 	margin: 0;
 	padding: 0;
-}
-
-/* .App-header {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	position: relative;
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-} */
+	align-items: center;
+	min-height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
 .navbar {
 	margin-top: 0;
-	height: 10vh;
+	height: 12vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
@@ -27,7 +22,16 @@ body {
 	color: #232526;
 	background-color: #34a5da;
 	padding-left: 5%;
-	position: absolute;
+	position: fixed;
+	z-index: 1000;
+}
+
+.btns {
+	width: 80%;
+	padding-top: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
 }
 
 #prevBtn {
@@ -42,16 +46,85 @@ body {
 	background-color: transparent;
 	cursor: pointer;
 	color: white;
-	padding-left: 60%;
 }
 
-/* button {
-	display: inline-block;
-} */
-
 .data {
-	margin: 0;
-	background: white;
+	background-color: #ebebeb;
+	text-align: center;
 	padding-top: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 	width: 80%;
+	height: 20%;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	height: 100vh;
+}
+
+.id {
+	position: absolute;
+	padding-right: 5%;
+	top: 0px;
+	right: 0px;
+}
+
+.name {
+	position: absolute;
+	top: 5%;
+	left: 8%;
+	text-decoration: underline #34a5da;
+	text-underline-offset: 12%;
+}
+
+.location {
+	padding-top: 5px;
+	position: absolute;
+	top: 20%;
+	left: 8%;
+	display: flex;
+	align-items: baseline;
+}
+
+.title {
+	padding-top: 15px;
+	position: absolute;
+	top: 25%;
+	left: 8%;
+	display: flex;
+	align-items: baseline;
+}
+
+.employer {
+	padding-top: 40px;
+	position: absolute;
+	top: 27%;
+	left: 8%;
+	display: flex;
+	align-items: baseline;
+}
+
+.favoriteMovies {
+	padding-top: 80px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	text-align: left;
+	left: 8%;
+	top: 35%;
+}
+
+#movieList {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin-top: -1em;
 }
