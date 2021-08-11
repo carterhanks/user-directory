@@ -14,7 +14,11 @@ function ProfileBox() {
     }
 
     function incrementCount() {
-        setNumber(number + 1);
+        if (number > 24) {
+            alert('Nothing here! Press previous.')
+        } else {
+            setNumber(number + 1);
+        }
     }
 
     // TO-DO - Create function that removes (stops displaying) the 'previous' button when data.js is at user 1
